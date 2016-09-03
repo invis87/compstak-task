@@ -13,7 +13,7 @@ object Task1 {
         case false => tail
         case true  => tail.filter(_ != head)
       }
-      val res = result ++ tail.map(x => (head, x))
+      val res = result ++ tail.toSet[Int].map(x => (head, x))
       helper(filteredTail, res)
   }
 

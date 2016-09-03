@@ -16,7 +16,7 @@ object Task2 {
       array
     }
 
-    suitMapping.contains(4)
+    suitMapping.max >= 4
   }
 
   def isFourOfAKindSimplest(hand: Seq[Card]): Boolean = {
@@ -25,7 +25,7 @@ object Task2 {
     }
 
     val groupedBySuit = hand.groupBy(_.suit)
-    groupedBySuit.values.toSeq.map(_.size).contains(4)
+    groupedBySuit.values.toSeq.map(_.size).max >= 4
   }
 
   def isFourOfAKindWithTask1(hand: Seq[Card]): Boolean = {
@@ -34,7 +34,7 @@ object Task2 {
     }
 
     val suits = hand.map(_.suit)
-    Task1.getPairs(suits).size == 1
+    Task1.getPairs(suits).size <= 2
   }
 
 }
