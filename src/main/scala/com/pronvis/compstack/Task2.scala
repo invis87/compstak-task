@@ -6,8 +6,8 @@ object Task2 {
   case class Card(rank: Int, suit: Int)
 
   def isFourOfAKind(hand: Seq[Card]): Boolean = {
-    if(hand.size != properHandSize) {
-      throw new IllegalArgumentException(s"Hand should contain exactly $properHandSize cards, but actual size is: ${hand.size}!")
+    if (hand.size != properHandSize) {
+      throw new IllegalArgumentException(s"Hand should contain exactly $properHandSize cards, but actual size is: ${ hand.size }!")
     }
 
     val suits = hand.map(_.suit % 4) //todo: hack, move suit logic to Card class
@@ -20,8 +20,8 @@ object Task2 {
   }
 
   def isFourOfAKindSimplest(hand: Seq[Card]): Boolean = {
-    if(hand.size != properHandSize) {
-      throw new IllegalArgumentException(s"Hand should contain exactly $properHandSize cards, but actual size is: ${hand.size}!")
+    if (hand.size != properHandSize) {
+      throw new IllegalArgumentException(s"Hand should contain exactly $properHandSize cards, but actual size is: ${ hand.size }!")
     }
 
     val groupedBySuit = hand.groupBy(_.suit)
@@ -29,8 +29,8 @@ object Task2 {
   }
 
   def isFourOfAKindWithTask1(hand: Seq[Card]): Boolean = {
-    if(hand.size != properHandSize) {
-      throw new IllegalArgumentException(s"Hand should contain exactly $properHandSize cards, but actual size is: ${hand.size}!")
+    if (hand.size != properHandSize) {
+      throw new IllegalArgumentException(s"Hand should contain exactly $properHandSize cards, but actual size is: ${ hand.size }!")
     }
 
     val suits = hand.map(_.suit)

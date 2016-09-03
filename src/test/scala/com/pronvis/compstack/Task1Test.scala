@@ -20,7 +20,7 @@ class Task1Test extends FlatSpec with Matchers {
   it should "should contain (x, x) pair if input list contains two x's" in {
     val testList = List(1, 8, 12, 5, 7, 1)
     val pairs = getPairs(testList)
-    pairs should contain (1, 1)
+    pairs should contain(1, 1)
   }
 
   it should "return list of empty pairs for empty input" in {

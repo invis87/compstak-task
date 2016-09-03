@@ -3,7 +3,7 @@ package com.pronvis.compstack
 import org.scalatest.{Matchers, WordSpec}
 import Task2._
 
-class Task2Test extends WordSpec with Matchers{
+class Task2Test extends WordSpec with Matchers {
 
   def checkFourOfAKind(funcName: String, fourOfAKindFunc: Seq[Card] => Boolean) = {
     funcName should {
